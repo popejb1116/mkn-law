@@ -1,13 +1,8 @@
 import React from 'react'
-//import image from '../../images/home_litigation.jpg'
 import image from '../../../aesthetic/images/card/home_litigation.jpg'
-//import placeholder from '../../images/placeholders/home_litigation_placeholder.jpg'
 import placeholder from '../../../aesthetic/images/card-placeholders/home_litigation_placeholder.jpg'
-//import { PlaceholderContext } from '../../context/PlaceholderContext'
 import { PlaceholderContext } from '../../../contexts/PlaceholderContext'
-//import { Layout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText, InlineLink, CardText2 } from './_ContentStyledComponents'
 import { ContentLayout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText, InlineLink } from './_StyledComponents'
-
 import { withRouter } from 'react-router-dom'
 
 const Home = props => {

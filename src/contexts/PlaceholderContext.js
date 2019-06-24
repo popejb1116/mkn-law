@@ -8,7 +8,7 @@ class PlaceholderProvider extends React.Component {
       home_ligitation: 1,
       contracts: 1,
       hr_consulting: 1,
-      ee_law: 1
+      test: 1
    }
 
    handleOpacityChange = (e, imgRef) => {

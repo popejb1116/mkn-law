@@ -5,7 +5,7 @@ import Navlinks from './Navlinks'
 const StyledNavbar = styled.div`
    grid-area: n;
    background: ${ props => props.theme.primary };   
-   border-top: solid 5px ${ props => props.theme.secondary };;   
+   border-top: solid 5px ${ props => props.theme.accent };   
 `
 
 const Navbar = () => {

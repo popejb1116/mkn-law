@@ -13,7 +13,7 @@ export const Card = styled.div`
    background-color: ${ props => props.theme.secondary };
    max-width: 900px;
    margin: 2rem 0rem; 
-   border: solid 3px whitesmoke;
+   border: solid 5px whitesmoke;
    border-radius: 10px;
 `
 
@@ -28,8 +28,8 @@ export const BlurUpContainer = styled.div`
       position: absolute;
       top: 0;
       left: 0;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
       -webkit-transition: opacity 0.4s ease-in-out;
       -moz-transition: opacity 0.4s ease-in-out;
       -o-transition: opacity 0.4s ease-in-out;
