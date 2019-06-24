@@ -5,11 +5,12 @@ import Content from './content/Content'
 import Navbar from './navigation/Navbar'
 import Footer from './footer/Footer'
 import styled from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
 
 const StyledLayout = styled.div`
    display: grid;
    height: 100vh;
-   grid-gap: 3px;
+   /* grid-gap: 1px; */
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: 15vh 5vh auto 20vh;
    grid-template-areas: 
@@ -27,7 +28,7 @@ const StyledLayout = styled.div`
       " f f f f f f f f f f f f "
       ;
 
-      #nav {
+      #styled-navbar {
          display: none;
       }
    }
@@ -39,7 +40,11 @@ const Layout = () => {
          <Header />
          <Aside />
          <Content />
-         <Navbar />
+
+         <BrowserRouter>
+            <Navbar />
+         </BrowserRouter>
+
          <Footer />
       </StyledLayout>
    )
