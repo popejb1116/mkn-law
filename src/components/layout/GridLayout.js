@@ -5,9 +5,11 @@ import Content from './content/Content'
 import Navbar from './navigation/Navbar'
 import Footer from './footer/Footer'
 import styled from 'styled-components'
-import { BrowserRouter } from 'react-router-dom'
 
-const StyledLayout = styled.div`
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './content/Home'
+
+const StyledGridLayout = styled.div`
    display: grid;
    height: 100vh;
    /* grid-gap: 1px; */
@@ -34,20 +36,21 @@ const StyledLayout = styled.div`
    }
 `
 
-const Layout = () => {
+const GridLayout = () => {
    return (
-      <StyledLayout>
+      <StyledGridLayout>
          <Header />
          <Aside />
-         <Content />
-
+         
+         {/* CONTENT COMPS */}
          <BrowserRouter>
             <Navbar />
+            <Route path="/" component={ Home } />
          </BrowserRouter>
 
          <Footer />
-      </StyledLayout>
+      </StyledGridLayout>
    )
 }
 
-export default Layout
+export default GridLayout

@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from './components/layout/Layout'
+import GridLayout from './components/layout/GridLayout'
 
 function App() {
   return (
-    <Layout />
+    <GridLayout />
   )
 }
 
