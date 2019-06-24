@@ -7,6 +7,7 @@ import Footer from './footer/Footer'
 import styled from 'styled-components'
 
 import { BrowserRouter, Route } from 'react-router-dom'
+import { PlaceholderProvider } from '../../contexts/PlaceholderContext'
 import Home from './content/Home'
 
 const StyledGridLayout = styled.div`
@@ -44,8 +45,13 @@ const GridLayout = () => {
          
          {/* CONTENT COMPS */}
          <BrowserRouter>
+
             <Navbar />
-            <Route path="/" component={ Home } />
+            
+            <PlaceholderProvider>
+               <Route path="/" component={ Home } />
+            </PlaceholderProvider>
+
          </BrowserRouter>
 
          <Footer />

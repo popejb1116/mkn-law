@@ -4,6 +4,7 @@ import image from '../../../aesthetic/images/card/home_litigation.jpg'
 //import placeholder from '../../images/placeholders/home_litigation_placeholder.jpg'
 import placeholder from '../../../aesthetic/images/card-placeholders/home_litigation_placeholder.jpg'
 //import { PlaceholderContext } from '../../context/PlaceholderContext'
+import { PlaceholderContext } from '../../../contexts/PlaceholderContext'
 //import { Layout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText, InlineLink, CardText2 } from './_ContentStyledComponents'
 import { ContentLayout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText, InlineLink } from './_StyledComponents'
 
@@ -16,7 +17,7 @@ const Home = props => {
       <ContentLayout>
          <Card>
 
-            {/* <PlaceholderContext.Consumer>
+            <PlaceholderContext.Consumer>
                { context => (
                   <BlurUpContainer>
                      <img
@@ -29,7 +30,7 @@ const Home = props => {
                      />
                   </BlurUpContainer>
                )}                  
-            </PlaceholderContext.Consumer> */}
+            </PlaceholderContext.Consumer>
             
             <CardContent>
                <CardTitle>Employment Law Solutions</CardTitle>
