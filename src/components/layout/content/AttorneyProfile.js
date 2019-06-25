@@ -13,12 +13,12 @@ const AttorneyProfile = () => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
+                        src={image} alt="img-error"
                         onLoad={ e => context.handleOpacityChange(e, "ap_cu") }
                      />
                      <PlaceholderImg 
+                        src={placeholder} alt="placeholder-error"
                         opacity={context.placeholderOpacities.ap_cu}
-                        src={placeholder}
                      />
                   </BlurUpContainer>
                )}                  

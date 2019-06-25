@@ -14,11 +14,11 @@ const Contracts = () => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
+                        src={image} alt="img-error"
                         onLoad={ e => context.handleOpacityChange(e, "contracts") }
                      />
                      <PlaceholderImg 
-                        src={placeholder}
+                        src={placeholder} alt="placeholder-error"
                         opacity={context.placeholderOpacities.contracts}
                      />
                   </BlurUpContainer>

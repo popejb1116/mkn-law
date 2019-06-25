@@ -13,7 +13,7 @@ export const Card = styled.div`
    background-color: ${ props => props.theme.secondary };
    max-width: 900px;
    margin: 2rem 0rem; 
-   border: solid 5px whitesmoke;
+   border: solid 5px white;
    border-radius: 10px;
 `
 

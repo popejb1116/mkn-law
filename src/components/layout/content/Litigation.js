@@ -2,7 +2,7 @@ import React from 'react'
 import image from '../../../aesthetic/images/card/home_litigation.jpg'
 import placeholder from '../../../aesthetic/images/card-placeholders/home_litigation_placeholder.jpg'
 import { PlaceholderContext } from '../../../contexts/PlaceholderContext'
-import { ContentLayout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText, InlineLink } from './_StyledComponents'
+import { ContentLayout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText } from './_StyledComponents'
 
 const Litigation = () => {
    return (
@@ -13,12 +13,12 @@ const Litigation = () => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
+                        src={image} alt="img-error"
                         onLoad={ e => context.handleOpacityChange(e, "home_ligitation") }
                      />
                      <PlaceholderImg 
+                        src={placeholder} alt="placeholder-error"
                         opacity={context.placeholderOpacities.home_ligitation}
-                        src={placeholder}
                      />
                   </BlurUpContainer>
                )}                  

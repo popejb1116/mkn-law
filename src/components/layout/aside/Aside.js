@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import SocialMediaPlank from './SocialMediaPlank'
+import ExternalLinkPlank from './ExternalLinkPlank'
 
 const StyledAside = styled.div`
    grid-area: a;
 
    display: flex;
    flex-flow: column nowrap;
-   justify-content: space-around;
+   justify-content: flex-start;
    align-items: center;
 
    background: transparent;
@@ -16,7 +16,7 @@ const StyledAside = styled.div`
 const Aside = () => {
    return (
       <StyledAside>
-         <SocialMediaPlank />
+         <ExternalLinkPlank />
       </StyledAside>
    )
 }

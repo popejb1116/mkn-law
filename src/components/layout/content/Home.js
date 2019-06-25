@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom'
 
 const Home = props => {
 
-   //TODO: ADD ALTs TO IMG TAGS
    return (
       <ContentLayout>
          <Card>
@@ -16,11 +15,11 @@ const Home = props => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
+                        src={image} alt="img-error"
                         onLoad={ e => context.handleOpacityChange(e, "home_ligitation") }
                      />
                      <PlaceholderImg 
-                        src={ placeholder }
+                        src={ placeholder } alt="placeholder-error"
                         opacity={context.placeholderOpacities.home_ligitation}
                      />
                   </BlurUpContainer>
@@ -51,7 +50,7 @@ const Home = props => {
                <br/><br/>
 
                <InlineLink 
-                  onClick={() => props.history.push("/hrconsulting")}
+                  onClick={() => props.history.push("/hr-consulting")}
                >HR CONSULTING
                </InlineLink>
                <CardText>{text5}</CardText>

@@ -15,12 +15,12 @@ const ContactUs = props => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
-                        onLoad={ e => context.handleOpacityChange(e, "ee_law") }
+                        src={image} alt="img-error"
+                        onLoad={ e => context.handleOpacityChange(e, "ap_cu") }
                      />
                      <PlaceholderImg 
-                        opacity={context.placeholderOpacities.ee_law}
-                        src={placeholder}
+                        src={placeholder} alt="placeholder-error"
+                        opacity={context.placeholderOpacities.ap_cu}
                      />
                   </BlurUpContainer>
                )}                  

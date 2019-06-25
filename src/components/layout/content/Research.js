@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContentLayout, Card, BlurUpContainer, PlaceholderImg, CardContent, CardTitle, CardText } from './_StyledComponents'
+import { ContentLayout, Card, CardContent, CardTitle, CardText } from './_StyledComponents'
 
 const Research = () => {
    return (

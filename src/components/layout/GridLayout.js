@@ -26,7 +26,7 @@ const StyledGridLayout = styled.div`
    grid-template-areas: 
       " h h h h h h h h h h h h "
       " n n n n n n n n n n n n "
-      " a a c c c c c c c c c c "
+      " . a a c c c c c c . . . "
       " f f f f f f f f f f f f "
    ;
 
@@ -52,17 +52,19 @@ const GridLayout = () => {
          
          {/* CONTENT COMPS */}
          <BrowserRouter>
+            
+
             <Navbar />
                <PlaceholderProvider>                  
-                  <Route exact path="/" component={ Home } />
-                  <Route path="/litigation" component={ Litigation } />
-                  <Route path="/contracts" component={ Contracts } />
-                  <Route path="/hr-consulting" component={ HRConsulting } />
-                  <Route path="/research" component={ Research } />
-                  <Route path="/attorney-profile" component={ AttorneyProfile } />
-                  <Route exact path="/contact-us" component={ ContactUs } />
-                  <Route exact path="/contact-us/business" component={ BusinessForm } />
-                  <Route exact path="/contact-us/employee" component={ EmployeeForm } />
+                  <Route exact path="/" component = { Home } />
+                  <Route path="/litigation" component = { Litigation } />
+                  <Route path="/contracts" component = { Contracts } />
+                  <Route path="/hr-consulting" component = { HRConsulting } />
+                  <Route path="/research" component = { Research } />
+                  <Route path="/attorney-profile" component = { AttorneyProfile } />
+                  <Route exact path="/contact-us" component = { ContactUs } />
+                  <Route exact path="/contact-us/business" component = { BusinessForm } />
+                  <Route exact path="/contact-us/employee" component = { EmployeeForm } />
                </PlaceholderProvider>
          </BrowserRouter>
 

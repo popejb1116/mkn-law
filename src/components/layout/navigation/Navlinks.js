@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const StyledDesktopLinks = styled.nav`   
    display: flex;
    justify-content: center;
+   height: 100%;
 
    .nav-links {
       display: flex;
@@ -12,7 +13,7 @@ const StyledDesktopLinks = styled.nav`
       justify-content: space-around;
       align-items: center;
 
-      height: 5vh;
+      height: 100%;
       width: 60vw;
       
       color: whitesmoke;

@@ -14,12 +14,12 @@ const HRConsulting = props => {
                { context => (
                   <BlurUpContainer>
                      <img
-                        src={image}
+                        src={image} alt="img-error"
                         onLoad={ e => context.handleOpacityChange(e, "hr_consulting") }
                      />
                      <PlaceholderImg 
+                        src={placeholder} alt="placeholder-error"
                         opacity={context.placeholderOpacities.hr_consulting}
-                        src={placeholder}
                      />
                   </BlurUpContainer>
                )}                  
