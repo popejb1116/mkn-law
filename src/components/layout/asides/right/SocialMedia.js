@@ -25,16 +25,18 @@ const StyledImg = styled.img`
 `
 
 const SocialMedia = () => {
-   return (
-      
+   return (      
          <StyledSocialMedia>
+            <a href="https://facebook.com">
             <StyledImg src = { facebookIcon } alt="fb"/>
-            <StyledImg src = { linkedinIcon } alt="ln"/>
-            <a href="https://twitter.com">
-               <StyledImg src = { twitterIcon } />
             </a>
-         </StyledSocialMedia>
-      
+            <a href="https://linkedin.com">
+            <StyledImg src = { linkedinIcon } alt="ln"/>
+            </a>
+            <a href="https://twitter.com">
+            <StyledImg src = { twitterIcon } alt="tw"/>
+            </a>
+         </StyledSocialMedia>      
    )
 }
 
