@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import legalEliteIcon from '../../../aesthetic/images/icons/legal-elite.png'
-import superLawyersIcon from '../../../aesthetic/images/icons/super-lawyers.png'
-import preeminentIcon from '../../../aesthetic/images/icons/preeminent.jpg'
+import legalEliteIcon from '../../../../aesthetic/images/icons/legal-elite.png'
+import superLawyersIcon from '../../../../aesthetic/images/icons/super-lawyers.png'
+import preeminentIcon from '../../../../aesthetic/images/icons/preeminent.jpg'
 
 const StyledBuisnessRating = styled.div`
    display: flex;
