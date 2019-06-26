@@ -1,8 +1,10 @@
 import React from 'react'
 //LAYOUT
 import Header from './header/Header'
-import LeftAside from './asides/left/LeftAside'
-import RightAside from './asides/right/RightAside'
+import TopAside from './asides/TopAside'
+import RightAside from './asides/RightAside'
+import BottomAside from './asides/BottomAside'
+import LeftAside from './asides/LeftAside'
 import Navbar from './navigation/Navbar'
 import Footer from './footer/Footer'
 import { BrowserRouter, Route } from 'react-router-dom'
@@ -31,18 +33,27 @@ const StyledGridLayout = styled.div`
       " . la la c c c c c c ra . . "
       " f f f f f f f f f f f f "
    ;
+   #styled-top-aside, #styled-bottom-aside {
+      display: none;
+   }
 
    /* TODO: UPDATE ASIDE */
    @media only screen and (max-width: 1000px) {
       grid-template-rows: 12vh 10vh auto 20vh;
       grid-template-areas: 
       " h h h h h h h h h h h h "
-      " la la la la la la la la la ra ra ra "
+      " ta ta ta ta ta ta ta ta ta ta ta ta "
       " c c c c c c c c c c c c "
       " f f f f f f f f f f f f "
    ;
 
       #styled-navbar {
+         display: none;
+      }
+      #styled-top-aside {
+         display: block;
+      }
+      #styled-left-aside, #styled-right-aside {
          display: none;
       }
    }
@@ -51,14 +62,13 @@ const StyledGridLayout = styled.div`
       grid-template-rows: 12vh 8vh auto 8vh 20vh;
       grid-template-areas: 
       " h h h h h h h h h h h h "
-      " ra ra ra ra ra ra ra ra ra ra ra ra "
+      " ta ta ta ta ta ta ta ta ta ta ta ta "
       " c c c c c c c c c c c c "
-      " la la la la la la la la la la la la "
+      " ba ba ba ba ba ba ba ba ba ba ba ba "
       " f f f f f f f f f f f f "
    ;
-
-      #styled-navbar {
-         display: none;
+      #styled-bottom-aside {
+         display: block;
       }
    }
 `
@@ -67,8 +77,10 @@ const GridLayout = () => {
    return (
       <StyledGridLayout>
          <Header />
-         <LeftAside />
+         <TopAside />
          <RightAside />
+         <BottomAside />
+         <LeftAside />
          
          <BrowserRouter>
             <Navbar />

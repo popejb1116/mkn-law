@@ -1,31 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import Plank from '../Plank'
-import SocialMedia from './SocialMedia'
+import Plank from './Plank'
+import BusinessRating from './left/BusinessRating'
 
 const StyledLeftAside = styled.div`
-   grid-area: ra;
+   grid-area: la;
 
    display: flex;
    flex-flow: column nowrap;
    justify-content: flex-start;
-   align-items: flex-start;
+   align-items: flex-end;
 
    background: transparent;
-
-   margin-left: 0.75rem;
-
-   @media screen and (max-width: 1000px) {
-      flex-flow: row nowrap;
-      margin-left: 0rem;
-   }
 `
 
 const Aside = () => {
    return (
-      <StyledLeftAside>
+      <StyledLeftAside id="styled-left-aside">
          <Plank>
-            <SocialMedia />
+            Left Aside
          </Plank>
       </StyledLeftAside>
    )
