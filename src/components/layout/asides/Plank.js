@@ -16,11 +16,21 @@ const StyledPlank = styled.div`
 
    border: solid 5px white;
    border-radius: 10px;
+
+   @media screen and (max-width: 1000px) {
+      flex-flow: row nowrap;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+
+      border: none;
+      border-radius: 0px;
+   }
 `
 
 const Plank = props => {
    return(
-      <StyledPlank>
+      <StyledPlank id="styled-plank">
          { props.children }
       </StyledPlank>
    )

@@ -33,11 +33,27 @@ const StyledGridLayout = styled.div`
    ;
 
    /* TODO: UPDATE ASIDE */
-   @media only screen and (max-width: 768px) {
+   @media only screen and (max-width: 1000px) {
+      grid-template-rows: 12vh 10vh auto 20vh;
       grid-template-areas: 
       " h h h h h h h h h h h h "
-      " a a a a a a a a a a a a "
+      " la la la la la la la la la ra ra ra "
       " c c c c c c c c c c c c "
+      " f f f f f f f f f f f f "
+   ;
+
+      #styled-navbar {
+         display: none;
+      }
+   }
+
+   @media only screen and (max-width: 768px) {
+      grid-template-rows: 12vh 8vh auto 8vh 20vh;
+      grid-template-areas: 
+      " h h h h h h h h h h h h "
+      " ra ra ra ra ra ra ra ra ra ra ra ra "
+      " c c c c c c c c c c c c "
+      " la la la la la la la la la la la la "
       " f f f f f f f f f f f f "
    ;
 

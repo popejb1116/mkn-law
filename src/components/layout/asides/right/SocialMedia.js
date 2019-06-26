@@ -10,7 +10,12 @@ const StyledSocialMedia = styled.div`
    justify-content: center;
    align-items: center;
 
+   height: 100%;
    width: 90%;
+
+   @media screen and (max-width: 1000px) {
+      flex-flow: row nowrap;
+   }
 `
 
 const StyledImg = styled.img`
@@ -26,17 +31,17 @@ const StyledImg = styled.img`
 
 const SocialMedia = () => {
    return (      
-         <StyledSocialMedia>
-            <a href="https://facebook.com">
+      <StyledSocialMedia>
+         <a href="https://facebook.com">
             <StyledImg src = { facebookIcon } alt="fb"/>
-            </a>
-            <a href="https://linkedin.com">
+         </a>
+         <a href="https://linkedin.com">
             <StyledImg src = { linkedinIcon } alt="ln"/>
-            </a>
-            <a href="https://twitter.com">
+         </a>
+         <a href="https://twitter.com">
             <StyledImg src = { twitterIcon } alt="tw"/>
-            </a>
-         </StyledSocialMedia>      
+         </a>
+      </StyledSocialMedia>      
    )
 }
 

@@ -7,8 +7,15 @@ import preeminentIcon from '../../../../aesthetic/images/icons/preeminent.jpg'
 const StyledBuisnessRating = styled.div`
    display: flex;
    flex-flow: column nowrap;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
+
+   width: 100%;
+   height: 100%;
+
+   @media screen and (max-width: 1000px) {
+      flex-flow: row nowrap;
+   }
 `
 
 const StyledImg = styled.img`
@@ -19,7 +26,6 @@ const StyledImg = styled.img`
    background: transparent;
    color: white;
 
-   margin: 0.5rem;
    border: none;
 `
 

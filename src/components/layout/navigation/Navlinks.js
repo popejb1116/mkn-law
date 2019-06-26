@@ -27,6 +27,15 @@ const StyledDesktopLinks = styled.nav`
       font-weight: bolder;
       text-decoration: none;
    }
+
+   @media screen and (max-width: 1200px) {
+      .nav-links {
+         width: 70vw;
+      }
+      .link {
+         font-size: 1.8vh;
+      }
+   }
 `
 
 const Navlinks = () => {

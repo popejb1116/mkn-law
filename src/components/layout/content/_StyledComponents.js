@@ -59,7 +59,7 @@ export const CardText = styled.p`
 `
 
 export const InlineLink = styled.div`
-   color: ${ props => props.theme.accent };
+   color: whitesmoke;
    font-size: 1rem;
    font-weight: bolder;
    display: inline;

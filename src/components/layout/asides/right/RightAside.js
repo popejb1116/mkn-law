@@ -14,6 +14,11 @@ const StyledLeftAside = styled.div`
    background: transparent;
 
    margin-left: 0.75rem;
+
+   @media screen and (max-width: 1000px) {
+      flex-flow: row nowrap;
+      margin-left: 0rem;
+   }
 `
 
 const Aside = () => {

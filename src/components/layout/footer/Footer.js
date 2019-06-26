@@ -20,6 +20,10 @@ const StyledFooterTitle = styled.div`
    font-size: 4vh;
    font-weight: bolder;
    text-align: center;
+
+   @media screen and (max-width: 768px) {
+      font-size: 3vh;
+   }
 `
 
 const StyledFooterText = styled.div`
@@ -28,6 +32,10 @@ const StyledFooterText = styled.div`
    font-size: 2vh;
    font-weight: bold;
    text-align: center;
+
+   @media screen and (max-width: 768px) {
+      font-size: 1.5vh;
+   }
 `
 
 const Footer = () => {
