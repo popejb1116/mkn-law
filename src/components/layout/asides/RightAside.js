@@ -12,6 +12,8 @@ const StyledRightAside = styled.div`
    align-items: flex-start;
 
    background: transparent;
+
+   margin: 2vh 0 0 1vw;
 `
 
 const RightAside = () => {

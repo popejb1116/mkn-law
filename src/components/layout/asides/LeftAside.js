@@ -12,6 +12,8 @@ const StyledLeftAside = styled.div`
    align-items: flex-end;
 
    background: transparent;
+
+   margin: 2vh 1vw 0 0;
 `
 
 const Aside = () => {
