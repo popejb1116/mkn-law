@@ -11,18 +11,18 @@ const StyledFooter = styled.div`
 
    background: ${ props => props.theme.secondary };   
 
-   border-top: solid 5px whitesmoke;
+   border-top: solid 5px white;
 `
 
 const StyledFooterTitle = styled.div`
    color: whitesmoke;
-   padding: 0.25rem;
-   font-size: 4vh;
+   padding: 1vh 0.5vw;
+   font-size: 3.5vh;
    font-weight: bolder;
    text-align: center;
 
    @media screen and (max-width: 768px) {
-      font-size: 3vh;
+      font-size: 2.75vh;
    }
 `
 
@@ -34,7 +34,7 @@ const StyledFooterText = styled.div`
    text-align: center;
 
    @media screen and (max-width: 768px) {
-      font-size: 1.5vh;
+      font-size: 1.25vh;
    }
 `
 

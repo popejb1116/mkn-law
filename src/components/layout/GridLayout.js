@@ -1,10 +1,10 @@
 import React from 'react'
 //LAYOUT
 import Header from './header/Header'
-import TopAside from './asides/TopAside'
-import RightAside from './asides/RightAside'
-import BottomAside from './asides/BottomAside'
-import LeftAside from './asides/LeftAside'
+import TopAside from './asides/top/TopAside'
+import RightAside from './asides/right/RightAside'
+import BottomAside from './asides/bottom/BottomAside'
+import LeftAside from './asides/left/LeftAside'
 import Navbar from './navigation/Navbar'
 import Footer from './footer/Footer'
 import { BrowserRouter, Route } from 'react-router-dom'
@@ -39,7 +39,7 @@ const StyledGridLayout = styled.div`
 
    /* TODO: UPDATE ASIDE */
    @media only screen and (max-width: 1000px) {
-      grid-template-rows: 12vh 10vh auto 20vh;
+      grid-template-rows: 12vh 12vh auto 20vh;
       grid-template-areas: 
       " h h h h h h h h h h h h "
       " ta ta ta ta ta ta ta ta ta ta ta ta "
@@ -51,7 +51,7 @@ const StyledGridLayout = styled.div`
          display: none;
       }
       #styled-top-aside {
-         display: block;
+         display: flex;
       }
       #styled-left-aside, #styled-right-aside {
          display: none;
@@ -59,7 +59,7 @@ const StyledGridLayout = styled.div`
    }
 
    @media only screen and (max-width: 768px) {
-      grid-template-rows: 12vh 8vh auto 8vh 20vh;
+      grid-template-rows: 12vh 12vh auto 10vh 20vh;
       grid-template-areas: 
       " h h h h h h h h h h h h "
       " ta ta ta ta ta ta ta ta ta ta ta ta "
@@ -68,7 +68,7 @@ const StyledGridLayout = styled.div`
       " f f f f f f f f f f f f "
    ;
       #styled-bottom-aside {
-         display: block;
+         display: flex;
       }
    }
 `

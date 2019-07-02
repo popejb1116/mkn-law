@@ -10,6 +10,7 @@ const StyledHeader = styled.div`
    align-items: center;
 
    background: ${ props => props.theme.primary };   
+   border-bottom: solid 5px ${ props => props.theme.secondary };   
 `
 
 const Header = () => {
