@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navlinks from './Navlinks'
+import { DisplayMobileNavContext } from '../../../contexts/DisplayMobileNavContext'
 
 const StyledMobileNavbar = styled.div`
    display: flex;
@@ -19,14 +20,18 @@ const StyledMobileNavbar = styled.div`
    z-index: 1;
 
    transition: transform 1s;
-   transform: translateX(0%);
+   transform: translateX(${ props => props.displayMobileNavbar ? ("0%") : ("100%") });
 `
 
 const MobileNavbar = () => {
    return (
-      <StyledMobileNavbar>
-         <Navlinks isDesktop = { false } />
-      </StyledMobileNavbar>
+      <DisplayMobileNavContext.Consumer>
+         { context => (
+            <StyledMobileNavbar displayMobileNavbar = { context.displayMobileNavbar }>
+               <Navlinks isDesktop = { false } />
+            </StyledMobileNavbar>            
+         )}      
+      </DisplayMobileNavContext.Consumer>
    )
 }
 

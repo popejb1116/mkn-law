@@ -7,9 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from 'styled-components'
 import { theme } from './aesthetic/theme'
 
+import { DisplayMobileNavProvider } from './contexts/DisplayMobileNavContext'
+
 ReactDOM.render(
 <ThemeProvider theme = { theme }>
-   <App />
+   <DisplayMobileNavProvider>
+      <App />
+   </DisplayMobileNavProvider>
 </ThemeProvider>
 , document.getElementById('root'));
 
