@@ -5,7 +5,7 @@ import TopAside from './asides/top/TopAside'
 import RightAside from './asides/right/RightAside'
 import BottomAside from './asides/bottom/BottomAside'
 import LeftAside from './asides/left/LeftAside'
-import Navbar from './navigation/Navbar'
+import DesktopNavbar from './navigation/DesktopNavbar'
 import Footer from './footer/Footer'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { PlaceholderProvider } from '../../contexts/PlaceholderContext'
@@ -19,6 +19,8 @@ import AttorneyProfile from './content/AttorneyProfile'
 import ContactUs from './content/ContactUs'
 import BusinessForm from './content/BusinessForm'
 import EmployeeForm from './content/EmployeeForm'
+
+import MobileNavbar from './navigation/MobileNavbar'
 
 import styled from 'styled-components'
 
@@ -47,7 +49,7 @@ const StyledGridLayout = styled.div`
       " f f f f f f f f f f f f "
    ;
 
-      #styled-navbar {
+      #styled-DesktopNavbar {
          display: none;
       }
       #styled-top-aside {
@@ -83,7 +85,8 @@ const GridLayout = () => {
          <LeftAside />
          
          <BrowserRouter>
-            <Navbar />
+            <DesktopNavbar />
+            <MobileNavbar />
             {/* PROVIDES CONTROL OF CARD IMAGE PLACEHOLDER OPACITIES */}
             <PlaceholderProvider>                  
                <Route exact path="/" component = { Home } />

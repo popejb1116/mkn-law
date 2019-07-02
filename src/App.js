@@ -3,7 +3,9 @@ import GridLayout from './components/layout/GridLayout'
 
 function App() {
   return (
-    <GridLayout />
+     <React.Fragment>
+        <GridLayout />
+     </React.Fragment>
   )
 }
 
