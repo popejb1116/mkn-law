@@ -28,6 +28,7 @@ const StyledGridLayout = styled.div`
    display: grid;
    height: 100vh;
 
+   /* MOBILE NAV OVERFLOW */
    position: relative;
    overflow-x: hidden;
 

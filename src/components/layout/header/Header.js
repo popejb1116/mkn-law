@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 import MobileNavIcon from '../../../aesthetic/images/icons/mobile-nav-icon.svg'
@@ -29,21 +29,18 @@ const MobileNavButton = styled.button`
 `
 
 const Header = () => {
+
+   const value = useContext(DisplayMobileNavContext)
+   const currentlyDisplayingMobileNav = value.displayMobileNavbar
+
    return (
       <StyledHeader>
          <Logo />
-
-         <DisplayMobileNavContext.Consumer>
-            { context => (
-               <MobileNavButton            
-                  onClick = { context.toggleMobileNavButtonDisplay }   
-               >
-                  <img src = { MobileNavIcon } alt="nav-icon"/>
-               </MobileNavButton>
-            )}
-            
-         </DisplayMobileNavContext.Consumer>
-
+         <MobileNavButton            
+            onClick = {() => value.toggleMobileNavbar(!currentlyDisplayingMobileNav) }   
+         >
+            <img src = { MobileNavIcon } alt="nav-icon"/>
+         </MobileNavButton>
       </StyledHeader>
    )
 }

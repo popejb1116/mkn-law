@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Navlinks from './Navlinks'
 import { DisplayMobileNavContext } from '../../../contexts/DisplayMobileNavContext'
@@ -21,19 +21,15 @@ const StyledMobileNavbar = styled.div`
 
    transition: transform 1s;
    transform: translateX(${ props => props.displayMobileNavbar ? ("0%") : ("100%") });
-
-   overflow-x: hidden;
 `
 
 const MobileNavbar = () => {
+   const value = useContext(DisplayMobileNavContext)
+   console.log("Look Here" + value.displayMobileNavbar)  
    return (
-      <DisplayMobileNavContext.Consumer>
-         { context => (
-            <StyledMobileNavbar displayMobileNavbar = { context.displayMobileNavbar }>
-               <Navlinks isDesktop = { false } />
-            </StyledMobileNavbar>            
-         )}      
-      </DisplayMobileNavContext.Consumer>
+      <StyledMobileNavbar displayMobileNavbar = { value.displayMobileNavbar }>
+         <Navlinks isDesktop = { false } />
+      </StyledMobileNavbar> 
    )
 }
 
