@@ -8,10 +8,17 @@ class DisplayMobileNavProvider extends React.Component {
       displayMobileNavbar: true
    }
 
+   toggleMobileNavButtonDisplay = () => {
+      this.setState( prevState => {
+         return { displayMobileNavbar: !prevState.displayMobileNavbar }
+      })
+   }
+
    render() {
       return (
          <DisplayMobileNavContext.Provider value = {{
-            displayMobileNavbar: this.state.displayMobileNavbar
+            displayMobileNavbar: this.state.displayMobileNavbar,
+            toggleMobileNavButtonDisplay: this.toggleMobileNavButtonDisplay
          }}>
             {this.props.children}
          </DisplayMobileNavContext.Provider>

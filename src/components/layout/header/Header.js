@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
+import MobileNavIcon from '../../../aesthetic/images/icons/mobile-nav-icon.svg'
+import { DisplayMobileNavContext } from '../../../contexts/DisplayMobileNavContext'
 
 const StyledHeader = styled.div`
    grid-area: h;
@@ -13,10 +15,35 @@ const StyledHeader = styled.div`
    border-bottom: solid 5px ${ props => props.theme.secondary };   
 `
 
+const MobileNavButton = styled.button`
+   display: none;
+   width: 4rem;
+   height: 4rem;
+   margin-left: 15vw;
+   background: transparent;
+   border: none;
+
+   @media screen and (max-width: 1000px) {
+      display: block;
+   }
+`
+
 const Header = () => {
    return (
       <StyledHeader>
          <Logo />
+
+         <DisplayMobileNavContext.Consumer>
+            { context => (
+               <MobileNavButton            
+                  onClick = { context.toggleMobileNavButtonDisplay }   
+               >
+                  <img src = { MobileNavIcon } alt="nav-icon"/>
+               </MobileNavButton>
+            )}
+            
+         </DisplayMobileNavContext.Consumer>
+
       </StyledHeader>
    )
 }
