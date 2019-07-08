@@ -27,6 +27,10 @@ import styled from 'styled-components'
 const StyledGridLayout = styled.div`
    display: grid;
    height: 100vh;
+
+   position: relative;
+   overflow-x: hidden;
+
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: 15vh 8vh auto 20vh;
    grid-template-areas: 

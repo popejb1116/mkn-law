@@ -21,6 +21,8 @@ const StyledMobileNavbar = styled.div`
 
    transition: transform 1s;
    transform: translateX(${ props => props.displayMobileNavbar ? ("0%") : ("100%") });
+
+   overflow-x: hidden;
 `
 
 const MobileNavbar = () => {
