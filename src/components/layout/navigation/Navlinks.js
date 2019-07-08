@@ -31,10 +31,10 @@ const StyledDesktopLinks = styled.nav`
 
    @media screen and (max-width: 1200px) {
       .nav-links {
-         width: 70vw;
+         width: 95vw;
       }
       .link {
-         font-size: 1.8vh;
+         font-size: 1.6vh;
       }
    }
 `
