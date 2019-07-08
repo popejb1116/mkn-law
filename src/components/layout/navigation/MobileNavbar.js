@@ -14,6 +14,8 @@ const StyledMobileNavbar = styled.div`
    height: auto;
    width: 50vw;
 
+   box-shadow: -3px 3px 5px white;
+
    position: absolute;
    left: 50vw;
    top: 12vh;
@@ -25,7 +27,6 @@ const StyledMobileNavbar = styled.div`
 
 const MobileNavbar = () => {
    const value = useContext(DisplayMobileNavContext)
-   console.log("Look Here" + value.displayMobileNavbar)  
    return (
       <StyledMobileNavbar displayMobileNavbar = { value.displayMobileNavbar }>
          <Navlinks isDesktop = { false } />

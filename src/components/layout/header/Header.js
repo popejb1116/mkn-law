@@ -23,21 +23,27 @@ const MobileNavButton = styled.button`
    background: transparent;
    border: none;
 
+   transition: transform 1s ease-out;
+
+   &:focus {
+      outline: none;
+   }
+
    @media screen and (max-width: 1000px) {
       display: block;
+      transform: rotate(${props => props.displayMobileNavbar ? ("540deg") : ("0deg") })
    }
 `
 
 const Header = () => {
-
    const value = useContext(DisplayMobileNavContext)
-   const currentlyDisplayingMobileNav = value.displayMobileNavbar
-
    return (
       <StyledHeader>
          <Logo />
          <MobileNavButton            
-            onClick = {() => value.toggleMobileNavbar(!currentlyDisplayingMobileNav) }   
+            //TODO: CONFIRM IT'S OK TO USE displayMobileNavbar AS STATE REFERENCE
+            onClick = { () => value.toggleMobileNavbar(!value.displayMobileNavbar) }
+            displayMobileNavbar = { value.displayMobileNavbar }
          >
             <img src = { MobileNavIcon } alt="nav-icon"/>
          </MobileNavButton>
