@@ -35,6 +35,7 @@ const MobileNavbar = () => {
       }
    }
 
+   //TODO: DETERMINE IF removeEventListener IS NEEDED
    useEffect(() => {
       window.addEventListener('resize', checkForAutoCloseConditions)
    })

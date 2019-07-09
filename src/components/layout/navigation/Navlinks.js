@@ -15,18 +15,51 @@ const StyledDesktopLinks = styled.nav`
       align-items: center;
 
       height: 100%;
-      width: 60vw;
+      width: 85vw;
       
       color: whitesmoke;
 
       list-style: none;
    }
 
+   /* li {
+      height: 100%;
+      width: 100%;
+   } */
+
    .link {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      height: 8vh;
+      width: 100%;
+
+      background: transparent;
       color: white;
+
+      padding: 0 0.3rem;
+      border-radius: 5px;
+
       font-size: 2vh;
       font-weight: bolder;
       text-decoration: none;
+   }
+   .link:focus {
+      background: rgba(0, 0, 0, 0.3);
+      outline: none;
+   }
+
+   .link::after {
+      content: '';      
+      height: 2px;
+      width: 0;
+      background: white;
+      transition: width 1s;
+   }
+   .link:hover::after {
+      width: 100%;
    }
 
    @media screen and (max-width: 1200px) {
