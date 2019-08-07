@@ -7,7 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+   background: url(./aesthetic/images/background.jpg) no-repeat center center fixed;
+   background-size: cover;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }

@@ -1,26 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import GridLayout from './components/layout/GridLayout'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+   alert('Disclaimer, while the information on this website is technically accurate this is NOT Mr. Kerkhoff’s official website. Any and all information is unofficial, non-binding and ineffectual.')
+   
+   return (
+      <GridLayout />
+   )
 }
 
-export default App;
+export default App
